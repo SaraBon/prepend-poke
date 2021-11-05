@@ -14,14 +14,30 @@
 
 .paginationWrap {
     display: flex;
+    justify-content: center;
+}
+.paginationInner::-webkit-scrollbar {
+    display: none;
+  }
+
+.paginationInner {
+    width: 300px;
+    display: flex;
     overflow: scroll;
     margin-top: 60px;
+    flex-wrap: nowrap;
+    overflow: -moz-scrollbars-none;
 }
 
 .pageNumber {
     border: 1px solid slateblue;
     border-radius: 50%;
-    padding: 6px;
+    height: 30px;
+    min-width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
 }
 
 .activePage {

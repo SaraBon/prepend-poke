@@ -11,7 +11,8 @@ interface Props {
 const Pagination: React.FC<Props> = ({ totalPages, currentPage }) => {
   return (
     <div className={styles.paginationWrap}>
-	  {Array.from({length: totalPages} as {length: number}, (_, index) => {
+      <div className={styles.paginationInner}>
+      {Array.from({length: totalPages} as {length: number}, (_, index) => {
          return (
           <div className={`${styles.pageNumber} ${index === currentPage && styles.activePage}`}>
           <Link href="/[page]" as={`/${index}`}>
@@ -20,6 +21,7 @@ const Pagination: React.FC<Props> = ({ totalPages, currentPage }) => {
           </div>
          )
       })}
+      </div>
     </div>
   )
 }
